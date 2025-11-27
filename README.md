@@ -1,9 +1,10 @@
-# XPU Autonomous Vehicle Open Model Factory
+# XPU Autonomous Vehicle Open Model Tutorials
 
 ## 介绍
-*XAV* (XPU Autonomous Vehicle) Open Model Factory 是基于XPU加速的开源模型库.
+基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval)** 的训练支持
 - [25/08/20] 我们支持了 **[LLaVA](tutorials/LLaVA_trainval.md)、[OpenVLA](tutorials/openvla_trainval.md)** 模型的训练
 
 <details><summary>展开日志</summary>
@@ -155,7 +156,7 @@
             <td></td>
         </tr>
         <tr>
-            <td rowspan="3"> VLM/VLA Models </td>
+            <td rowspan="3"> VLM/VLA </td>
             <td><a href="tutorials/qwen2.5vl_3b_trainval.md">Qwen2.5-VL</a></td>
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
@@ -177,17 +178,25 @@
             <td></td>
         </tr>
         <tr>
-            <td rowspan="2"> LLM Models </td>
-            <td><a href="tutorials/qwen2.5_trainval.md">Qwen2.5</a></td>
+            <td rowspan="1"> World Model </td>
+            <td><a href="tutorials/DriveDreamer_trainval.md">DriveDreamer</a></td>
+            <td>Pretrain/SFT</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2"> LLM </td>
+            <td><a href="tutorials/qwen2.5_trainval.md">Qwen2.5-7B</a></td>
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
             <td></td>
         </tr>
         <tr>
-            <td><a href="tutorials/qwen2.5_infer.md">Qwen2.5</a></td>
-            <td>Inference</td>
-            <td>FP16/BF16/INT8</td>
+            <td><a href="tutorials/qwen3_8b_xmegatron_trainval">Qwen3-8B</a></td>
+            <td>Pre-training</td>
+            <td>BF16</td>
             <td>1 x 8</td>
             <td></td>
         </tr>
@@ -196,5 +205,5 @@
 
 
 ## 许可证
-XAV Open Model Factory gitee 使用 [Apache-2.0 license](LICENSE) 许可证。
+XAV Open Model Tutorials 使用 [Apache-2.0 license](LICENSE) 许可证。
 XAV 基于《[昆仑芯AI产品协议](LICENSE_KUNLUNXIN)》获得许可。若获取并使用XAV相关Docker容器，你将接受本许可协议中的条款与条件。
