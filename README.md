@@ -1,0 +1,200 @@
+# XPU Autonomous Vehicle Open Model Factory
+
+## 介绍
+*XAV* (XPU Autonomous Vehicle) Open Model Factory 是基于XPU加速的开源模型库.
+
+## 更新日志 🚀
+- [25/08/20] 我们支持了 **[LLaVA](tutorials/LLaVA_trainval.md)、[OpenVLA](tutorials/openvla_trainval.md)** 模型的训练
+
+<details><summary>展开日志</summary>
+
+- [25/07/04] 我们支持了 **[BEVFusion](tutorials/bevfusion_trainval.md)** 模型的训练
+
+- [25/05/27] 我们支持了 **[StreamPETR](tutorials/StreamPETR_trainval.md)** 模型的训练
+
+- [25/05/12] 我们支持了 **[VIT](tutorials/VIT_trainval.md)、[RegNet](tutorials/regnet_trainval)** 模型的训练
+
+- [25/04/30] 我们支持了 **[Qwen2.5-VL](tutorials/qwen2.5vl_infer.md)** 模型的推理
+
+- [25/04/11] 我们支持了 **[SparseDrive](tutorials/SparseDrive_trainval.md)、[Sparse4D](./tutorials/sparse4d_trainval.md)** 模型的训练
+
+</details>
+
+## 模型库
+<table>
+    <thead>
+        <tr>
+            <th>Model Type</th>
+            <th>Model</th>
+            <th>任务</th>
+            <th>精度格式</th>
+            <th>GPUs</th>
+            <th>参考性能</th>
+        </tr>
+    </thead>
+    <tbody>
+        </tr>
+            <td rowspan="2"> Basic Models </td>
+            <td><a href="tutorials/VIT_trainval.md">VisionTransformer</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        </tr>
+            <td><a href="tutorials/regnet_trainval.md">RegNet</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="15"> E2E AD Models </td>
+            <td><a href="tutorials/bevdet_trainval.md">BEVDet</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/bevformer_trainval.md">BEVFormer</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/PointPillar_trainval.md">PointPillar</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/lansegnet_trainval.md">LaneSegNet</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/maptrv2_trainval.md">Maptrv2</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/sparse4d_trainval.md">Sparse4D</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/StreamPETR_trainval.md">StreamPETR</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/bevfusion_trainval.md">BEVFusion</a></td>
+            <td>Pre-training</td>
+            <td>FP32/FP16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/Far3D_trainval.md">Far3D</a></td>
+            <td>Pre-training</td>
+            <td>FP16/FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/GameFormer-Planner_trainval.md">GameFormer-Planner</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/QCNet_trainval.md">QCNet</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/UniAD_trainval.md">UniAD</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/VAD_trainval.md">VAD</a></td>
+            <td>Pre-training</td>
+            <td>FP32/FP16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/SparseDrive_trainval.md">SparseDrive</a></td>
+            <td>Pre-training</td>
+            <td>FP32/FP16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/DiffusionDrive_trainval.md">DiffusionDrive</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="3"> VLM/VLA Models </td>
+            <td><a href="tutorials/qwen2.5vl_3b_trainval.md">Qwen2.5-VL</a></td>
+            <td>SFT/LoRA</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/qwen2.5vl_infer.md">Qwen2.5-VL</a></td>
+            <td>Inference</td>
+            <td>FP16/BF16/INT8</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/LLaVA_trainval.md">LLaVA</a></td>
+            <td>Pretrain/SFT</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2"> LLM Models </td>
+            <td><a href="tutorials/qwen2.5_trainval.md">Qwen2.5</a></td>
+            <td>SFT/LoRA</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/qwen2.5_infer.md">Qwen2.5</a></td>
+            <td>Inference</td>
+            <td>FP16/BF16/INT8</td>
+            <td>1 x 8</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+## 许可证
+XAV Open Model Factory gitee 使用 [Apache-2.0 license](LICENSE) 许可证。
+XAV 基于《[昆仑芯AI产品协议](LICENSE_KUNLUNXIN)》获得许可。若获取并使用XAV相关Docker容器，你将接受本许可协议中的条款与条件。
