@@ -31,7 +31,7 @@
             <th>任务</th>
             <th>精度格式</th>
             <th>GPUs</th>
-            <th>参考性能</th>
+            <th>框架</th>
         </tr>
     </thead>
     <tbody>
@@ -41,14 +41,14 @@
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
         </tr>
             <td><a href="tutorials/regnet_trainval.md">RegNet</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
         <tr>
             <td rowspan="15"> E2E AD Models </td>
@@ -56,105 +56,105 @@
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/bevformer_trainval.md">BEVFormer</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/PointPillar_trainval.md">PointPillar</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/lansegnet_trainval.md">LaneSegNet</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/maptrv2_trainval.md">Maptrv2</a></td>
             <td>Pre-training</td>
-            <td>FP32</td>
+            <td>FP32/FP16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/sparse4d_trainval.md">Sparse4D</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/StreamPETR_trainval.md">StreamPETR</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/bevfusion_trainval.md">BEVFusion</a></td>
             <td>Pre-training</td>
             <td>FP32/FP16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/Far3D_trainval.md">Far3D</a></td>
             <td>Pre-training</td>
             <td>FP16/FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/GameFormer-Planner_trainval.md">GameFormer-Planner</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
         <tr>
             <td><a href="tutorials/QCNet_trainval.md">QCNet</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
         <tr>
             <td><a href="tutorials/UniAD_trainval.md">UniAD</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/VAD_trainval.md">VAD</a></td>
             <td>Pre-training</td>
             <td>FP32/FP16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/SparseDrive_trainval.md">SparseDrive</a></td>
             <td>Pre-training</td>
             <td>FP32/FP16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>MMCV</td>
         </tr>
         <tr>
             <td><a href="tutorials/DiffusionDrive_trainval.md">DiffusionDrive</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>Navsim</td>
         </tr>
         <tr>
             <td rowspan="3"> VLM/VLA </td>
@@ -162,21 +162,21 @@
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>LLamaFactory</td>
         </tr>
         <tr>
             <td><a href="tutorials/LLaVA_trainval.md">LLaVA</a></td>
             <td>Pretrain/SFT</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
             <tr>
             <td><a href="tutorials/Pi_0_trainval.md">Pi0</a></td>
             <td>Pretrain/SFT</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>Lerobot</td>
         </tr>
         <tr>
             <td rowspan="1"> World Model </td>
@@ -184,7 +184,7 @@
             <td>Pretrain/SFT</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>-</td>
         </tr>
         <tr>
             <td rowspan="2"> LLM </td>
@@ -192,14 +192,14 @@
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>LLamaFactory</td>
         </tr>
         <tr>
             <td><a href="tutorials/qwen3_8b_xmegatron_trainval">Qwen3-8B</a></td>
             <td>Pre-training</td>
             <td>BF16</td>
             <td>1 x 8</td>
-            <td></td>
+            <td>Megatron</td>
         </tr>
     </tbody>
 </table>

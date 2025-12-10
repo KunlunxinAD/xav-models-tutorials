@@ -1,4 +1,4 @@
-# Pi_0
+# Pi0
 
 ## 环境准备
 请联系昆仑芯客户支持获取开发环境镜像。
@@ -8,9 +8,10 @@
 ```bash
 git-lfs install
 git clone https://huggingface.co/datasets/lerobot/behavior1k-task0000
-# 注意: 使用该数据集的时候会发生https://github.com/huggingface/lerobot/issues/2364，
+# 注意: 使用该数据集的时候会发生下述问题
+# https://github.com/huggingface/lerobot/issues/2364
 # 此问题与lerobot框架有关，解决方案是修改增加 
-# src/lerobot/datasets/lerobot_dataset.py 第560行tolerance_s的值
+# "src/lerobot/datasets/lerobot_dataset.py" 第560行`tolerance_s`的值
 ```
 
 ### 下载代码
@@ -19,32 +20,33 @@ git clone https://github.com/huggingface/lerobot.git
 ```
 
 ## 启动容器
-    ```bash
-    export XAV_IMAGE=<XAV_IMAGE>
-    export NAME_CONTAINER=lerobot
-    export MODEL_PATH=</path/to/models> #本地路径
-    
-    docker run -itd --privileged --net=host \
-        -w /workspace/xav-models/modelzoo \
-        -v ${MODEL_PATH}:/workspace/models \
-        --device=/dev/xpu0 --device=/dev/xpu1 --device=/dev/xpu2 \
-        --device=/dev/xpu3 --device=/dev/xpu4 --device=/dev/xpu5 \
-        --device=/dev/xpu6 --device=/dev/xpu7 \
-        --name ${NAME_CONTAINER} \
-        --shm-size 256g \
-        ${XAV_IMAGE} \
-        bash
-    
-    docker exec -it ${XAV_CONTAINER} bash
-    ```
+```bash
+export XAV_IMAGE=<XAV_IMAGE>
+export NAME_CONTAINER=lerobot
+export MODEL_PATH=</path/to/models>
+
+docker run -itd --privileged --net=host \
+    -w /workspace/xav-models/modelzoo \
+    -v ${MODEL_PATH}:/workspace/models \
+    --device=/dev/xpu0 --device=/dev/xpu1 --device=/dev/xpu2 \
+    --device=/dev/xpu3 --device=/dev/xpu4 --device=/dev/xpu5 \
+    --device=/dev/xpu6 --device=/dev/xpu7 \
+    --name ${NAME_CONTAINER} \
+    --shm-size 256g \
+    ${XAV_IMAGE} \
+    bash
+
+docker exec -it ${XAV_CONTAINER} bash
+```
 ### 配置容器内环境
-    ```bash
-    # 更新环境
-    cd lerobot
-    # 注意: 修改 pyproject.toml 注释 79-81行，对于torch的安装
-    pip install -e ".[pi]"
-    pip install peft==0.17.0
-    ```
+```bash
+# 更新环境
+cd lerobot
+
+# 注意: 修改 pyproject.toml 注释掉 79-81行 关于torch的安装
+pip install -e ".[pi]"
+pip install peft==0.17.0
+```
 
 
 ## 单机多卡训练
