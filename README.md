@@ -4,6 +4,7 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [25/12/09] 我们支持了 **[pi0](tutorials/Pi_0_trainval.md)** 模型的训练.
 - [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval)** 的训练支持
 - [25/08/20] 我们支持了 **[LLaVA](tutorials/LLaVA_trainval.md)、[OpenVLA](tutorials/openvla_trainval.md)** 模型的训练
 
@@ -164,14 +165,14 @@
             <td></td>
         </tr>
         <tr>
-            <td><a href="tutorials/qwen2.5vl_infer.md">Qwen2.5-VL</a></td>
-            <td>Inference</td>
-            <td>FP16/BF16/INT8</td>
+            <td><a href="tutorials/LLaVA_trainval.md">LLaVA</a></td>
+            <td>Pretrain/SFT</td>
+            <td>FP16/BF16</td>
             <td>1 x 8</td>
             <td></td>
         </tr>
-        <tr>
-            <td><a href="tutorials/LLaVA_trainval.md">LLaVA</a></td>
+            <tr>
+            <td><a href="tutorials/Pi_0_trainval.md">Pi0</a></td>
             <td>Pretrain/SFT</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
