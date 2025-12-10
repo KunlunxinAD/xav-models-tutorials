@@ -8,7 +8,9 @@
 ```bash
 git-lfs install
 git clone https://huggingface.co/datasets/lerobot/behavior1k-task0000
-# 使用该数据集的时候会发生https://github.com/huggingface/lerobot/issues/2364， 此问题与lerobot框架有关，解决方案是修改增加src/lerobot/datasets/lerobot_dataset.py第560行tolerance_s的值
+# 注意: 使用该数据集的时候会发生https://github.com/huggingface/lerobot/issues/2364，
+# 此问题与lerobot框架有关，解决方案是修改增加 
+# src/lerobot/datasets/lerobot_dataset.py 第560行tolerance_s的值
 ```
 
 ### 下载代码
@@ -17,7 +19,6 @@ git clone https://github.com/huggingface/lerobot.git
 ```
 
 ## 启动容器
-1. 启动容器：
     ```bash
     export XAV_IMAGE=<XAV_IMAGE>
     export NAME_CONTAINER=lerobot
@@ -36,11 +37,11 @@ git clone https://github.com/huggingface/lerobot.git
     
     docker exec -it ${XAV_CONTAINER} bash
     ```
-2. 配置容器内环境：
+### 配置容器内环境
     ```bash
     # 更新环境
     cd lerobot
-    # 修改 pyproject.toml 注释 79-81行，对于torch的安装
+    # 注意: 修改 pyproject.toml 注释 79-81行，对于torch的安装
     pip install -e ".[pi]"
     pip install peft==0.17.0
     ```
@@ -52,7 +53,7 @@ git clone https://github.com/huggingface/lerobot.git
 export BKCL_TREE_THRESHOLD=0
 ```
 
-### 训练
+### 执行训练
 ```bash
 cd lerobot
 accelerate launch \
@@ -72,7 +73,7 @@ accelerate launch \
   --batch_size=2 \
   --log_freq=1
 ```
-### 训练示例
+### 训练日志示例
 ```bash
 INFO 2025-12-09 17:09:48 ot_train.py:354 step:2 smpl:256 ep:0 epch:0.00 loss:4.235 grdn:156.835 lr:2.3e-05 updt_s:3.176 data_s:0.010
 INFO 2025-12-09 17:09:51 ot_train.py:354 step:3 smpl:384 ep:0 epch:0.00 loss:2.352 grdn:95.974 lr:2.0e-05 updt_s:2.581 data_s:0.008
