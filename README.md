@@ -52,7 +52,7 @@
             <td>-</td>
         </tr>
         <tr>
-            <td rowspan="15"> E2E AD Models </td>
+            <td rowspan="16"> E2E AD Models </td>
             <td><a href="tutorials/bevdet_trainval.md">BEVDet</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
@@ -68,6 +68,13 @@
         </tr>
         <tr>
             <td><a href="tutorials/PointPillar_trainval.md">PointPillar</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td>MMCV</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/PETR_trainval.md">PETR</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
             <td>1 x 8</td>
