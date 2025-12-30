@@ -4,6 +4,7 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [25/12/30] 我们支持了 **[PETR](tutorials/PETR_trainval.md)** 模型的训练.
 - [25/12/09] 我们支持了 **[pi0](tutorials/Pi_0_trainval.md)** 模型的训练.
 - [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval)** 的训练支持
 - [25/08/20] 我们支持了 **[LLaVA](tutorials/LLaVA_trainval.md)、[OpenVLA](tutorials/openvla_trainval.md)** 模型的训练
