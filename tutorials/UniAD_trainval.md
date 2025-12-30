@@ -38,10 +38,10 @@ docker exec -it ${XAV_CONTAINER} bash
 
 ## 下载及安装资源
 
-**下载UniAD代码并解压,下载UniAD_v2.tar版本：**
+**下载UniAD代码并解压：**
 ```bash
 cd /home
-wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/UniAD.tar.gz
+wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/UniAD_v1.tar.gz
 tar -zxvf UniAD.tar.gz && rm UniAD.tar.gz
 ```
 
@@ -73,6 +73,8 @@ pip install pytorch-lightning==1.2.5 --no-deps
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/env_patch/nuscenes_data_classes.patch
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/env_patch/nuscenes_mot.patch
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/env_patch/torchmetrics_metric.patch
+wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/env_patch/multi_scale_deform_attn.patch
+wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/env_patch/focal_loss.patch
 ```
 
 **注入修改：**
@@ -80,6 +82,8 @@ wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/uniad/en
 patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/nuscenes/eval/detection/data_classes.py < nuscenes_data_classes.patch
 patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/nuscenes/eval/tracking/mot.py < nuscenes_mot.patch
 patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/torchmetrics/metric.py < torchmetrics_metric.patch
+patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/mmcv/ops/multi_scale_deform_attn.py < multi_scale_deform_attn.patch
+patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/mmcv/ops/focal_loss.py < focal_loss.patch
 ```
 
 ### 执行训练
@@ -87,7 +91,7 @@ patch /root/miniconda/envs/python38_torch201_cuda/lib/python3.8/site-packages/to
 **训练stage 1：**
 ```bash
 cd /home/UniAD
-export XMLIR_ENABLE_LINEAR_FC_FUSION=0
+export XPYTORCH_RUN_ENHANCE=1
 export CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'
 ./tools/uniad_dist_train.sh ./projects/configs/stage1_track_map/base_track_map.py 8
 unset CUDA_VISIBLE_DEVICES
@@ -98,7 +102,7 @@ popd
 **训练stage 2：**
 ```bash
 cd /home/UniAD
-export XMLIR_ENABLE_LINEAR_FC_FUSION=0
+export XPYTORCH_RUN_ENHANCE=1
 export CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'
 ./tools/uniad_dist_train.sh  ./projects/configs/stage2_e2e/base_e2e.py  8
 unset CUDA_VISIBLE_DEVICES
@@ -110,7 +114,7 @@ popd
 **评估stage 1：**
 ```bash
 cd /home/UniAD
-export XMLIR_ENABLE_LINEAR_FC_FUSION=0
+export XPYTORCH_RUN_ENHANCE=1
 export CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'
 ./tools/uniad_dist_eval.sh ./projects/configs/stage1_track_map/base_track_map.py ./ckpts/uniad_base_track_map.pth  8
 unset CUDA_VISIBLE_DEVICES
@@ -121,7 +125,7 @@ popd
 **评估stage 2：**
 ```bash
 cd /home/UniAD
-export XMLIR_ENABLE_LINEAR_FC_FUSION=0
+export XPYTORCH_RUN_ENHANCE=1
 export CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'
 ./tools/uniad_dist_eval.sh ./projects/configs/stage2_e2e/base_e2e.py  ./ckpts/uniad_base_e2e.pth  8
 unset CUDA_VISIBLE_DEVICES
