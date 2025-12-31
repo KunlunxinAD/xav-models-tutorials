@@ -1,4 +1,8 @@
-# BEVFusion-mmdetection3d
+# BEVFusion-MMDetection3D
+
+## 概述
+BEVFusion是一个多模态3D目标检测模型。它将两个模态的特征分别转换到统一的BEV空间下，然后进行特征融合，最后基于融合后的BEV特征进行3D检测。MMDetection3D是一个集成了大量3D感知模型的优秀开源工具箱。BEVFusion是其支持的一个重要且标杆性的模型。
+
 ## 准备环境
 请联系昆仑芯客户支持获取开发环境镜像。
 
@@ -11,6 +15,19 @@
 |<XAV_IMAGE>|开发环境镜像|
 |</path/to/workspace>|本地工作空间路径|
 |</path/to/nuscenes>|本地nuScenes数据集路径|
+
+## 准备数据集
+
+通过下面两种方式之一来下载数据集：
+
+- 按照官方教程，下载并处理nuScenes数据集，参考[MMDet3D框架的标准处理nuScenes数据集官方文档](https://github.com/open-mmlab/mmdetection3d/blob/1.0/docs/en/data_preparation.md)即可。
+
+- 通过昆仑芯bos拉取已经下载并预处理好的数据集：
+
+    ```bash
+    wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/data/changan_nuscenes.tar
+    tar -xvf changan_nuscenes.tar&& rm changan_nuscenes.tar
+    ```
 
 ## 启动容器
 ```bash
@@ -47,24 +64,27 @@ docker run -dti \
 ```
 
 ## 资源下载及安装
-**下载BEVFusion-mmdetection3d代码并解压：**
+
+**下载BEVFusion-MMDetection3D代码并解压：**
 ```bash
+mkdir -p /home/bevfusion-mmdet3d
+cd /home/bevfusion-mmdet3d
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/mmdetection3d.tar.gz
 tar -zxvf mmdetection3d.tar.gz
 ```
 
 **预训练模型下载：**
 ```bash
-cd /home/mmdetetion3d/
+cd /home/bevfusion-mmdet3d/mmdetetion3d/
 mkdir pretrained
 cd pretrained
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/pretrained/swint-nuimages-pretrained.pth
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/pretrained/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d-2628f933.pth 
 ```
 
-**数据下载：**
+**数据集挂载：**
 ```bash
-cd /home/mmdetetion3d/data
+cd /home/bevfusion-mmdet3d/mmdetetion3d//data
 ln -s /data/nuscenes ./
 ```
 
@@ -73,26 +93,12 @@ ln -s /data/nuscenes ./
 ```bash
 conda activate python310_torch25_cuda
 pip uninstall spconv
-```
-
-**更新依赖库（<xav_image>镜像版本为1.2.0及以上的请跳过此步骤）：**
-```bash
-https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/xav_dsal-0.3.1-cp310-cp310-linux_x86_64.whl
-pip install xav_dsal-0.3.1-cp310-cp310-linux_x86_64.whl
-
-wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/xpytorch-cp310-torch251-ubuntu2004-x64.run
-chmod 777 xpytorch-cp310-torch251-ubuntu2004-x64.run
-./xpytorch-cp310-torch251-ubuntu2004-x64.run
-
-pip install mmcv==2.1.0
-pip install mmengine==0.8.0
-pip install mmdet3d==1.4.0
-pip install mmdet==3.0.0
+pip install numba==0.56.4
 ```
 
 ## 训练与评估
 **运行以下命令进行单机8卡训练与评估：**
 ```bash
-cd /home/mmdetection3d
+cd /home/bevfusion-mmdet3d/mmdetetion3d/
 bash run_bevfusion.sh
 ```
