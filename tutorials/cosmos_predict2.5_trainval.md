@@ -1,4 +1,4 @@
-# cosmos-predict25
+# cosmos-predict2.5
 
 ## 准备环境
 请联系昆仑芯客户支持获取开发环境镜像。
