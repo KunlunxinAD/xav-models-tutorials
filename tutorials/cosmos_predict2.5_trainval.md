@@ -78,6 +78,7 @@ pip install -e .
 pip install accelerate==1.3.0
 pip install transformers==4.51.3
 pip install peft==0.17.1
+pip install numpy==1.26.4
 ```
 
 ### 准备数据集
