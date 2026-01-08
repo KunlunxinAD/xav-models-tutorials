@@ -4,6 +4,8 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [26/01/07] 我们支持了 **[cosmos-transfer2.5](tutorials/cosmos_transfer2.5_trainval.md)** 模型的训练和推理.
+- [26/01/07] 我们支持了 **[cosmos-predict2.5](tutorials/cosmos_predict2.5_trainval.md)** 模型的训练和推理.
 - [25/12/30] 我们支持了 **[PETR](tutorials/PETR_trainval.md)**、**[FastBEV](tutorials/FastBEV_trainval.md)**、**[MaskRCNN](tutorials/MaskRCNN_trainval.md)** 模型的训练.
 - [25/12/09] 我们支持了 **[pi0](tutorials/Pi_0_trainval.md)** 模型的训练.
 - [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval)** 的训练支持
@@ -201,10 +203,23 @@
             <td>Lerobot</td>
         </tr>
         <tr>
-            <td rowspan="1"> World Model </td>
+            <td rowspan="3"> World Model </td>
             <td><a href="tutorials/DriveDreamer_trainval.md">DriveDreamer</a></td>
             <td>Pretrain/SFT</td>
             <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/cosmos_predict2.5_trainval.md">cosmos-predict2.5</a></td>
+            <td>SFT</td>
+            <td>BF16</td>
+            <td>1 x 8</td>
+            <td>-</td>
+        </tr>
+            <td><a href="tutorials/cosmos_transfer2.5_trainval.md">cosmos-transfer2.5</a></td>
+            <td>SFT</td>
+            <td>BF16</td>
             <td>1 x 8</td>
             <td>-</td>
         </tr>
