@@ -75,7 +75,7 @@ tar -zxvf mmdetection3d.tar.gz
 
 **预训练模型下载：**
 ```bash
-cd /home/bevfusion-mmdet3d/mmdetetion3d/
+cd /home/bevfusion-mmdet3d/mmdetection3d/
 mkdir pretrained
 cd pretrained
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusion/pretrained/swint-nuimages-pretrained.pth
@@ -84,7 +84,7 @@ wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/bevfusio
 
 **数据集挂载：**
 ```bash
-cd /home/bevfusion-mmdet3d/mmdetetion3d//data
+cd /home/bevfusion-mmdet3d/mmdetection3d/data
 ln -s /data/nuscenes ./
 ```
 
@@ -99,6 +99,6 @@ pip install numba==0.56.4
 ## 训练与评估
 **运行以下命令进行单机8卡训练与评估：**
 ```bash
-cd /home/bevfusion-mmdet3d/mmdetetion3d/
+cd /home/bevfusion-mmdet3d/mmdetection3d/
 bash run_bevfusion.sh
 ```
