@@ -72,7 +72,7 @@ paddle2onnx --model_dir ./inference/PP-OCRv5_mobile_det_infer \
 --enable_onnx_checker True
 
 #然后运行，需要设置use_gpu=True，不然跑的是cpu
-python3 tools/infer/predict_system.py --use_gpu=True --use_onnx=True \
+python3 tools/infer/predict_system.py --use_xpu=True --use_onnx=True \
 --det_model_dir=./inference/det_onnx/model.onnx  \
 --rec_model_dir=./inference/rec_onnx/model.onnx  \
 --rec_char_dict_path=./ppocr/utils/dict/ppocrv5_dict.txt \
