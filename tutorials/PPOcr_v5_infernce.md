@@ -37,6 +37,8 @@ git checkout release/3.3
 
 ## 安装依赖
 ```bash
+#for export onnx
+python -m pip install --pre paddlepaddle -i https://www.paddlepaddle.org.cn/packages/nightly/cpu/
 #安装xpu版的paddle
 python -m pip install paddlepaddle-xpu==3.3.0 -i https://www.paddlepaddle.org.cn/packages/stable/xpu-p800/
 python -m pip install paddleocr
