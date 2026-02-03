@@ -49,6 +49,8 @@ pip install scikit-image
 pip install pyclipper
 pip install albumentations
 pip install lmdb
+pip install shapely
+pip install numpy==1.24.4
 ```
 ## ONNX推理
 ```bash
