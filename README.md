@@ -4,6 +4,7 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [26/02/04] 我们支持了 **[xav_vLLM](tutorials/xav_vLLM.md)** QWen、QWen-VL系列的推理.
 - [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PPOcr_v5_infernce.md)** 模型的onnx推理.
 - [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PaddleOCR_trainval.md)** 模型的训练和推理.
 - [26/02/02] 我们支持了 **[Yolo11](tutorials/Yolo11_inference.md)** 模型的pytorch推理.
