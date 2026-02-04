@@ -7,7 +7,6 @@
 - [26/02/04] 我们支持了 **[Qwen3-4B](tutorials/qwen3_llamafactory_trainval.md)**、**[Qwen3-30B-A3B](tutorials/qwen3_llamafactory_trainval.md)** 模型的训练.
 - [26/02/04] 我们支持了 **[Qwen3-235B-A22B-Thinking-2507](tutorials/qwen3_235b_a22b_thinking_2507_infer.md)** 模型的推理.
 - [26/02/04] 我们支持了 **[xav_vLLM](tutorials/xav_vLLM.md)** QWen、QWen-VL系列的推理.
-- [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PPOcr_v5_infernce.md)** 模型的onnx推理.
 - [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PaddleOCR_trainval.md)** 模型的训练和推理.
 - [26/02/02] 我们支持了 **[Yolo11](tutorials/Yolo11_inference.md)** 模型的pytorch推理.
 - [26/01/07] 我们支持了 **[cosmos-transfer2.5](tutorials/cosmos_transfer2.5_trainval.md)** 模型的训练和推理.
