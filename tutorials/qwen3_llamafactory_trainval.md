@@ -26,13 +26,13 @@ docker exec -it ${XAV_CONTAINER} bash
 ## 配置容器内环境
 
 ```bash
-pip install transformers==4.51.0
 pip install omegaconf==2.3.0
 pip install numpy==1.26.4 
 pip install peft==0.14.0
 pip install accelerate==1.8.1
 pip install --no-build-isolation flash-attn==2.4.0.post1
 pip install huggingface_hub
+pip install transformers==4.51.0
 ```
 
 ## 下载框架及安装
