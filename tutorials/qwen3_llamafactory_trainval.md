@@ -26,7 +26,7 @@ docker exec -it ${XAV_CONTAINER} bash
 ## 配置容器内环境
 
 ```bash
-pip install transformers==4.50.1
+pip install transformers==4.51.0
 pip install omegaconf==2.3.0
 pip install numpy==1.26.4 
 pip install peft==0.14.0
@@ -44,6 +44,7 @@ cd /workspace
 git clone https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
 git reset --hard b44f651e0905fed54f9455acd25bc2cfed8f1b94
+pip install --no-deps -e .
 
 # 新建两个空目录，用于存放模型和运行配置
 mkdir models
