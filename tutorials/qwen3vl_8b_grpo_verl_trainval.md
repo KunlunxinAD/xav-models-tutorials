@@ -6,17 +6,17 @@
 
 ## 数据集及模型准备
 ### 数据集准备
+- 下载geo3k数据集
 ```bash
-# 下载geo3k数据集
 cd /home
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/data/geo3k.tar.gz
 tar -xzf geo3k.tar.gz
 ```
 
 ### 下载预训练权重
+- 从huggingface 下载预训练权重
+- 下载Qwen3-VL-8B-Instruct 模型权重
 ```bash
-# 从huggingface 下载预训练权重
-# 下载Qwen3-VL-8B-Instruct 模型权重
 cd /home
 git lfs install
 git clone https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
@@ -25,9 +25,10 @@ git clone https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
 ## 启动容器
 ```bash
 vim run_docker.sh
+```
 
-# 在run_docker.sh中复制以下代码,并保存
-
+- 在run_docker.sh中复制以下代码,并保存
+```bash
 #!/usr/bin/env bash
 set -x
 script_help() {
@@ -71,8 +72,10 @@ docker run -dti --name "${container_name}" --privileged \
 # get xpu tool
 docker cp -L  $(which xpu_smi) $container_name:/bin/xpu_smi || true
 docker exec -it ${container_name} bash
+```
 
-# 执行启动镜像脚本, IMAGE_NAME填入真实镜像
+- 执行启动镜像脚本, IMAGE_NAME填入真实镜像
+```bash
 bash run_docker.sh -n qwen3_vl_8b_verl -i IMAGE_NAME 
 ```
 
@@ -84,9 +87,13 @@ ray start --head --num-gpus=8
 ## 训练
 ```bash
 cd /workspace
+```
 
-# 下载训练脚本，需要更改第149行，输入自己的wandb key
+- 下载训练脚本，需要更改第149行，输入自己的wandb key
+```bash
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/code/xpu_p800_qwen3-vl-8b_tp4_pp1_1node.sh
-# 启动脚本进行训练
+```
+- 启动脚本进行训练
+```bash
 bash xpu_p800_qwen3-vl-8b_tp4_pp1_1node.sh
 ```
