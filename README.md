@@ -4,8 +4,9 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [26/02/04] 我们支持了 **[Qwen3-4B](tutorials/qwen3_llamafactory_trainval.md)**、**[Qwen3-30B-A3B](tutorials/qwen3_llamafactory_trainval.md)** 模型的训练.
+- [26/02/04] 我们支持了 **[Qwen3-235B-A22B-Thinking-2507](tutorials/qwen3_235b_a22b_thinking_2507_infer.md)** 模型的推理.
 - [26/02/04] 我们支持了 **[xav_vLLM](tutorials/xav_vLLM.md)** QWen、QWen-VL系列的推理.
-- [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PPOcr_v5_infernce.md)** 模型的onnx推理.
 - [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PaddleOCR_trainval.md)** 模型的训练和推理.
 - [26/02/02] 我们支持了 **[Yolo11](tutorials/Yolo11_inference.md)** 模型的pytorch推理.
 - [26/01/07] 我们支持了 **[cosmos-transfer2.5](tutorials/cosmos_transfer2.5_trainval.md)** 模型的训练和推理.
@@ -43,7 +44,7 @@
     </thead>
     <tbody>
         </tr>
-            <td rowspan="2"> Basic Models </td>
+            <td rowspan="4"> Basic Models </td>
             <td><a href="tutorials/VIT_trainval.md">VisionTransformer</a></td>
             <td>Pre-training</td>
             <td>FP32</td>
@@ -53,6 +54,20 @@
         </tr>
             <td><a href="tutorials/regnet_trainval.md">RegNet</a></td>
             <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/PaddleOCR_trainval.md">PaddleOCR_v5</a></td>
+            <td>Pre-training</td>
+            <td>FP32</td>
+            <td>1 x 8</td>
+            <td>PaddlePaddle</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/Yolo11_inference.md">Yolo11</a></td>
+            <td>Inference</td>
             <td>FP32</td>
             <td>1 x 8</td>
             <td>-</td>
@@ -228,7 +243,7 @@
             <td>-</td>
         </tr>
         <tr>
-            <td rowspan="2"> LLM </td>
+            <td rowspan="5"> LLM </td>
             <td><a href="tutorials/qwen2.5_trainval.md">Qwen2.5-7B</a></td>
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
@@ -236,19 +251,32 @@
             <td>LLamaFactory</td>
         </tr>
         <tr>
-            <td><a href="tutorials/qwen3_8b_xmegatron_trainval">Qwen3-8B</a></td>
+            <td><a href="tutorials/qwen3_8b_xmegatron_trainval.md">Qwen3-8B</a></td>
             <td>Pre-training</td>
             <td>BF16</td>
             <td>1 x 8</td>
             <td>Megatron</td>
         </tr>
         <tr>
-            <td rowspan="1"> OCR </td>
-            <td><a href="tutorials/PaddleOCR_trainval.md">PaddleOCR_v5</a></td>
-            <td>训练/推理</td>
-            <td>FP32</td>
+            <td><a href="tutorials/qwen3_llamafactory_trainval.md">Qwen3-4B</a></td>
+            <td>SFT/LoRA</td>
+            <td>FP16/BF16</td>
             <td>1 x 8</td>
-            <td>PaddlePaddle</td>
+            <td>LLamaFactory</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/qwen3_llamafactory_trainval.md">Qwen3-30B-A3B</a></td>
+            <td>SFT/LoRA</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td>LLamaFactory</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/qwen3_235b_a22b_thinking_2507_infer.md">Qwen3-235B-A22B-Thinking-2507</a></td>
+            <td>Inference</td>
+            <td>FP16</td>
+            <td>1 x 8</td>
+            <td>xSGL</td>
         </tr>
     </tbody>
 </table>

@@ -2,7 +2,6 @@
 
 ## 获取镜像
 请联系相关人员获取开发环境镜像。
-`iregistry.baidu-int.com/kunlunxin-self-driving/xav:25.12-py310`
 
 ## 准备环境
 
@@ -233,3 +232,98 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+## Benchmark
+可以直接使用vLLM的benchmark. 具体参考[vLLM Developer Guide Benchmark Suites](https://docs.vllm.ai/en/stable/contributing/benchmarks.html)
+
+### 1.Online Benchmark
+
+#### 1.1启动 the vLLM server
+
+服务启动脚本参考
+
+```bash
+python -m vllm.entrypoints.openai.api_server \
+      --host 0.0.0.0 \
+      --port 8000 \
+      --model /xxxx/xxxx/mkdel\
+      --gpu-memory-utilization 0.9 \
+      --trust-remote-code \
+      --max-model-len 32768 \
+      --tensor-parallel-size 1 \
+      --dtype float16 \
+      --no-enable-prefix-caching \
+      --no-enable-chunked-prefill \
+      --distributed-executor-backend mp \
+      --served-model-name modelname \
+      --compilation-config '{"splitting_ops": ["vllm.unified_attention", 
+                                                "vllm.unified_attention_with_output",
+                                                "vllm.unified_attention_with_output_kunlun",
+                                                "vllm.mamba_mixer2", 
+                                                "vllm.mamba_mixer", 
+                                                "vllm.short_conv", 
+                                                "vllm.linear_attention", 
+                                                "vllm.plamo2_mamba_mixer", 
+                                                "vllm.gdn_attention", 
+                                                "vllm.sparse_attn_indexer"]}' \
+
+```
+
+#### 1.2执行测试
+
+运行测试脚本，参考如下：
+
+```bash
+#!/bin/bash
+# Run benchmark tests
+python -m vllm.entrypoints.cli.main bench serve \
+    --host 127.0.0.1 \
+    --port xxxx \
+    --backend vllm \
+    --model modelname \
+    --dataset-name random \
+    --num-prompts 500 \
+    --random-input-len 1024 \
+    --random-output-len 1024 \
+    --tokenizer /xxxx/xxxx/model \
+    --ignore-eos 2>&1 | tee benchmark.log
+```
+
+#### 1.3结果
+
+最终结果如下所示
+
+```bash
+========== Serving Benchmark Result ==========
+Successful requests:                          500
+Benchmark duration (s):                       144.89
+Total input tokens:                           510414
+Total generated tokens:                       512000
+Request throughput (req/s):                   3.45
+Output token throughput (tok/s):              3533.68
+Total Token throughput (tok/s):               7056.42
+----------Time to First Token----------
+Mean TTFT (ms):                               57959.61
+Median TTFT (ms):                             43551.93
+P99 TTFT (ms):                                116202.52
+----------Time per Output Token (excl. 1st token)----------
+Mean TPOT (ms):                               33.30
+Median TPOT (ms):                             34.15
+P99 TPOT (ms):                                35.59
+----------Inter-token Latency----------
+Mean ITL (ms):                                33.30
+Median ITL (ms):                              29.05
+P99 ITL (ms):                                 46.14
+============================================
+```
+
+关键参数解释:
+
+| index                        | meaning                 | Optimization Objective   |
+| --------------------------- | ------------------------------------| ---------- |
+| ***\*Output Throughput\**** | Output token generation rate                   | ↑ The higher the better |
+| ***\*Mean TTFT\****         | First Token Delay (Time To First Token)         | ↓ The lower the better |
+| ***\*P99 TTFT\****          | 99% of requests have delayed first token.       | ↓ The lower the better |
+| ***\*Mean TPOT\****         | Average generation time per output token | ↓ The lower the better |
+| ***\*P99 TPOT\****          | 99% of requests' time per token generation    | ↓ The lower the better |
+| ***\*ITL\****               | Delay between adjacent output tokens            | ↓ The lower the better |
