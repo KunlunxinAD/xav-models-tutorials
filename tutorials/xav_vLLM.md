@@ -69,7 +69,7 @@ bash xpytorch-cp310-torch251-ubuntu2004-x64.run
 unset LD_LIBRARY_PATH
 
 # 安装指定版本的官方vLLM
-pip install vllm==0.11.0 --no-build-isolation --no-deps --index-url https://pip.baidu-int.com/simple/
+pip install vllm==0.11.0 --no-build-isolation --no-deps
 
 # 安装vllm-plugin
 git clone https://github.com/KunlunxinAD/xav-vLLM.git
