@@ -53,6 +53,7 @@ pip install albumentations
 pip install lmdb
 pip install shapely
 pip install numpy==1.24.4
+pip install rapidfuzz
 ```
 
 可通过如下命令验证是否安装成功：

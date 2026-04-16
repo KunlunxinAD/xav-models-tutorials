@@ -4,6 +4,7 @@
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
 ## 更新日志 🚀
+- [26/04/16] 我们支持了 **[Qwen3-Omni-30B-A3B](tutorials/qwen3_omni_30b_a3b_infer.md)** 模型的推理.
 - [26/03/09] 我们支持了 **[Qwen3-30B-A3B](tutorials/qwen3_30b_a3b_pretrain.md)** 模型的预训练.
 - [26/02/04] 我们支持了 **[Qwen3-4B](tutorials/qwen3_llamafactory_trainval.md)**、**[Qwen3-30B-A3B](tutorials/qwen3_llamafactory_trainval.md)** 模型的训练.
 - [26/02/04] 我们支持了 **[Qwen3-235B-A22B-Thinking-2507](tutorials/qwen3_235b_a22b_thinking_2507_infer.md)** 模型的推理.
@@ -221,6 +222,15 @@
             <td>FP16/BF16</td>
             <td>1 x 8</td>
             <td>Lerobot</td>
+        </tr>
+        <tr>
+            <td rowspan="1"> Omni </td>
+            <td><a href="tutorials/qwen3_omni_30b_a3b_infer.md">Qwen3-Omni-30B-A3B</a></td>
+            <td>Inference</td>
+            <td>FP16</td>
+            <td>1 x 8</td>
+            <td>vLLM-Omni</td>
+        </tr>
         </tr>
         <tr>
             <td rowspan="3"> World Model </td>

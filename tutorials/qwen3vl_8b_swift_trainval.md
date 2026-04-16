@@ -25,6 +25,7 @@ git clone https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
 
 # 下载ms-swift代码以及配置
 git clone https://github.com/modelscope/ms-swift.git
+git checkout v3.12.6
 ```
 
 ## 启动容器
