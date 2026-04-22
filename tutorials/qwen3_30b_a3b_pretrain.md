@@ -150,7 +150,7 @@ OPTIMIZER_OFFLOAD=${OPTIMIZER_OFFLOAD:-false}
 SAVE_INTERVAL=${SAVE_INTERVAL:-5}
 STORAGE_PATH=${STORAGE_PATH:-/workspace/storage/}
 PRETRAIN_CHECKPOINT_PATH=${PRETRAIN_CHECKPOINT_PATH:-"/home/Qwen3/Qwen3-30B-A3B"}
-DATA_PATH=${DATA_PATH:-"/home/qwen3_data_content_document/qwen3_data_content_document"}
+DATASET_PATH=${DATASET_PATH:-"/home/qwen3_data_content_document/qwen3_data_content_document"}
 VALID_DATASET_PATH=${DATASET_PATH}
 
 MP_SFT_PACKING=false
