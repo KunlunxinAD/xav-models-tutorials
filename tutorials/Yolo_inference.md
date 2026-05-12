@@ -1,12 +1,19 @@
-# Yolo11
+# Yolo Inference Guide
 
 ## 准备环境
-将以下代码复制到bash脚本中启动docker
+
+请联系昆仑芯客户支持获取开发环境镜像。
+
+## 启动容器
+
+> 以下 docker 启动脚本请根据实际机器环境（镜像 tag、挂载目录、XPU 卡数等）自行补充：
+
 ```bash
-export XAV_IMAGE=iregistry.baidu-int.com/kunlunxin-self-driving/xav:25.12-py310
-export CONTAINER_NAME=yolo-infer-test2
-export MOUNT_PATH=/your/path/to/mount
-export data=/your/data/path
+export XAV_IMAGE=<XAV_IMAGE>
+export CONTAINER_NAME=xvllm_test
+export PATH_TO_MOUNT=</path/to/mount> #本地路径
+export PATH_AFTER_MOUNT=/home #挂载后在容器内的路径
+export DATA_PATH=</path/to/dataset>
 
 docker run -dti \
         --name ${CONTAINER_NAME} \
@@ -14,15 +21,15 @@ docker run -dti \
         --security-opt=seccomp=unconfined \
         -e IMAGE_VERSION="${XAV_IMAGE}" \
         --cap-add=SYS_PTRACE \
-        --shm-size=512g \
+        --shm-size=256g \
         --cap-add=SYS_ADMIN \
         --device /dev/fuse \
         --restart=always \
         --ulimit=memlock=-1 \
         --ulimit=nofile=120000 \
         --ulimit=stack=67108864 \
-        -v ${MOUNT_PATH}:/home \
-        -v ${DATA_PATH}:/data/ \
+        -v ${PATH_TO_MOUNT}:${PATH_AFTER_MOUNT} \
+        -v ${DATA_PATH}:/data \
         --cpuset-cpus=0-$((`nproc`-8)) \
         --device=/dev/xpu0:/dev/xpu0 \
         --device=/dev/xpu1:/dev/xpu1 \
@@ -35,23 +42,16 @@ docker run -dti \
         --privileged ${XAV_IMAGE}
 ```
 
-## 拉取代码
-```bash
-#拉取代码仓库
-git clone https://github.com/ultralytics/ultralytics.git
-```
-
 ## 安装依赖
 ```bash
-#如果安装慢可以使用清华源
 pip install "ultralytics[export]" -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## pytorch 推理
+## PyTorch 推理
 ```bash
 #建议单独创建一个文件夹用于推理
-mkdir inference
-cd inference
-#直接在终端输入CLI命令即可推理，详细的可以参考ultralytics/engine/exporter.py
+mkdir -p /home/inference
+cd /home/inference
+#直接在终端输入CLI命令即可使用ultralytics自带的测试数据进行推理。以yolo11n.pt为例：
 yolo predict model=yolo11n.pt
 ```
