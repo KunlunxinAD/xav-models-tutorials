@@ -166,6 +166,5 @@ LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XML
 cd /home/cosmos-predict2.5
 wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/cosmos_predict25/model_loader.patch
 patch cosmos_predict2/_src/predict2/utils/model_loader.py < model_loader.patch
-git apply --whitespace=nowarn model_loader.patch
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16  CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7' torchrun --nproc_per_node=8 --master_port=12341 -m scripts.train --config=cosmos_predict2/_src/predict2/configs/video2world/config.py -- experiment=predict2_video2world_training_14b_groot_gr1_480 model.config.use_high_sigma_strategy=false job.wandb_mode=disabled
 ```
