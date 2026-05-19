@@ -1,0 +1,32 @@
+# XAV Open Model Tutorials
+
+This repository is a Markdown knowledge base for XPU Autonomous Vehicle (XAV) model tutorials.
+
+## Start here
+
+- Human-facing overview: [README.md](README.md)
+- LLM wiki map: [wiki/index.md](wiki/index.md)
+- Agent maintenance rules: [CLAUDE.md](CLAUDE.md)
+- Append-only wiki log: [wiki/log.md](wiki/log.md)
+- Source tutorials: [tutorials/](tutorials/)
+
+## Repository layers
+
+- `tutorials/*.md` are source tutorial pages. Keep their paths stable; do not move or rename them unless a human explicitly asks.
+- `wiki/index.md` is the derived navigation and synthesis layer. Update it when tutorials are added, renamed, or materially changed.
+- `wiki/log.md` records wiki maintenance operations, resolved link issues, open questions, and contradictions.
+- `CLAUDE.md` defines how future LLMs and maintainers should update the wiki.
+
+## Daily workflows
+
+- Ingest: read a new tutorial/source, summarize it, update relevant wiki pages, update `wiki/index.md`, append to `wiki/log.md`.
+- Query: read `wiki/index.md`, inspect relevant source tutorials, answer with cited engineering conclusions.
+- Lint: check broken links, orphan pages, unindexed tutorials, contradictions, and missing benchmark evidence.
+
+## Answering rules for LLMs
+
+- Prefer citing the specific tutorial file that supports an answer.
+- Do not invent image tags, model paths, dataset paths, version numbers, performance numbers, or support status.
+- If README and a tutorial disagree, report the conflict and cite both instead of silently choosing one.
+- If a command uses placeholders such as `<XAV_IMAGE>` or `</path/to/model>`, preserve the placeholder and explain that it must be filled from the user's environment.
+- For newest or authoritative support status, check [README.md](README.md), [wiki/index.md](wiki/index.md), and [wiki/log.md](wiki/log.md) before answering.

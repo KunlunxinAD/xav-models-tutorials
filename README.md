@@ -3,6 +3,15 @@
 ## 介绍
 基于 *XAV* (XPU Autonomous Vehicle) 产品加速的自动驾驶模型教程与文档仓库
 
+## LLM Wiki 入口
+
+本仓库保留现有 `tutorials/` 教程目录，并新增面向 LLM/Agent 的轻量 wiki 层：
+
+- [llms.txt](llms.txt)：LLM/Agent 的最短入口与回答规则
+- [wiki/index.md](wiki/index.md)：按模型、任务和教程来源组织的派生索引
+- [wiki/log.md](wiki/log.md)：wiki 维护日志、已修复问题和待确认事项
+- [CLAUDE.md](CLAUDE.md)：新增/更新教程时的 Agent 维护规则
+
 ## 更新日志 🚀
 - [26/04/16] 我们支持了 **[Qwen3-Omni-30B-A3B](tutorials/qwen3_omni_30b_a3b_infer.md)** 模型的推理.
 - [26/03/09] 我们支持了 **[Qwen3-30B-A3B](tutorials/qwen3_30b_a3b_pretrain.md)** 模型的预训练.
@@ -10,12 +19,12 @@
 - [26/02/04] 我们支持了 **[Qwen3-235B-A22B-Thinking-2507](tutorials/qwen3_235b_a22b_thinking_2507_infer.md)** 模型的推理.
 - [26/02/04] 我们支持了 **[xav_vLLM](tutorials/xav_vLLM.md)** QWen、QWen-VL系列的推理.
 - [26/02/02] 我们支持了 **[PaddleOCR_v5](tutorials/PaddleOCR_trainval.md)** 模型的训练和推理.
-- [26/02/02] 我们支持了 **[Yolo11](tutorials/Yolo11_inference.md)** 模型的pytorch推理.
+- [26/02/02] 我们支持了 **[Yolo11](tutorials/Yolo_inference.md)** 模型的pytorch推理.
 - [26/01/07] 我们支持了 **[cosmos-transfer2.5](tutorials/cosmos_transfer2.5_trainval.md)** 模型的训练和推理.
 - [26/01/07] 我们支持了 **[cosmos-predict2.5](tutorials/cosmos_predict2.5_trainval.md)** 模型的训练和推理.
 - [25/12/30] 我们支持了 **[PETR](tutorials/PETR_trainval.md)**、**[FastBEV](tutorials/FastBEV_trainval.md)**、**[MaskRCNN](tutorials/MaskRCNN_trainval.md)** 模型的训练.
 - [25/12/09] 我们支持了 **[pi0](tutorials/Pi_0_trainval.md)** 模型的训练.
-- [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval)** 的训练支持
+- [25/11/27] 我们增加了 **[DriveDreamer](tutorials/DriveDreamer_trainval.md)、[Qwen3-8B](tutorials/qwen3_8b_xmegatron_trainval.md)** 的训练支持
 - [25/08/20] 我们支持了 **[LLaVA](tutorials/LLaVA_trainval.md)、[OpenVLA](tutorials/openvla_trainval.md)** 模型的训练
 
 <details><summary>展开日志</summary>
@@ -24,7 +33,7 @@
 
 - [25/05/27] 我们支持了 **[StreamPETR](tutorials/StreamPETR_trainval.md)** 模型的训练
 
-- [25/05/12] 我们支持了 **[VIT](tutorials/VIT_trainval.md)、[RegNet](tutorials/regnet_trainval)** 模型的训练
+- [25/05/12] 我们支持了 **[VIT](tutorials/VIT_trainval.md)、[RegNet](tutorials/regnet_trainval.md)** 模型的训练
 
 - [25/04/30] 我们支持了 **[Qwen2.5-VL](tutorials/qwen2.5vl_infer.md)** 模型的推理
 
@@ -68,7 +77,7 @@
             <td>PaddlePaddle</td>
         </tr>
         <tr>
-            <td><a href="tutorials/Yolo11_inference.md">Yolo11</a></td>
+            <td><a href="tutorials/Yolo_inference.md">Yolo11</a></td>
             <td>Inference</td>
             <td>FP32</td>
             <td>1 x 8</td>
@@ -118,7 +127,7 @@
             <td>Detectron2</td>
         </tr>
         <tr>
-            <td><a href="tutorials/lansegnet_trainval.md">LaneSegNet</a></td>
+            <td><a href="tutorials/lanesegnet_trainval.md">LaneSegNet</a></td>
             <td>Pretrain</td>
             <td>FP32</td>
             <td>1 x 8</td>
