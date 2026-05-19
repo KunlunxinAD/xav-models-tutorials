@@ -96,6 +96,17 @@ LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XML
 -- \ 
 experiment=predict2_multiview_post_train_waymo \ 
 job.wandb_mode=disabled
+
+# 不连接huggingface, 使用本地权重
+cd /home/cosmos-predict2.5
+wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/cosmos_predict25/dcp.patch
+patch cosmos_predict2/_src/predict2/checkpointer/dcp.py < dcp.patch
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'  torchrun --nproc_per_node=8 -m scripts.train \
+--config=cosmos_predict2/_src/predict2_multiview/configs/vid2vid/config.py \
+-- \
+experiment=predict2_multiview_post_train_waymo \
+checkpoint.load_path=/root/.cache/huggingface/hub \
+job.wandb_mode=disabled
 ```
 
 #### 单机8卡推理
@@ -103,6 +114,10 @@ job.wandb_mode=disabled
 # Multiview inference requires a minimum of 8 GPUs with at least 80GB memory each
 cd /home/cosmos-predict2.5
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 torchrun --nproc_per_node=8 examples/multiview.py -i assets/multiview/urban_freeway.json -o outputs/multiview_video2world --inference-type=video2world
+
+# 不连接huggingface, 使用本地权重
+cd /home/cosmos-predict2.5
+HF_HUB_OFFLINE=1 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 torchrun --nproc_per_node=8 examples/multiview.py -i assets/multiview/urban_freeway.json -o outputs/multiview_video2world --inference-type=video2world
 ```
 
 ### Robot Action-Conditioned
@@ -127,4 +142,30 @@ LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XML
 # Action conditioned inference does not yet support multi-GPU.
 cd /home/cosmos-predict2.5
 LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 CUDA_VISIBLE_DEVICES=7 python examples/action_conditioned.py -i assets/action_conditioned/basic/inference_params.json -o outputs/action_conditioned/basic
+```
+
+###  Video2World Post-training for DreamGen Bench
+
+#### 准备数据集
+参考 https://github.com/nvidia-cosmos/cosmos-predict2.5/blob/main/docs/post-training_video2world_gr00t.md 中数据集下载及处理的内容。
+
+#### 单机单卡训练
+```bash
+# Post-training Cosmos-Predict2.5 2B
+cd /home/cosmos-predict2.5
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 CUDA_VISIBLE_DEVICES=7 torchrun --nproc_per_node=1 --master_port=12341 -m scripts.train --config=cosmos_predict2/_src/predict2/configs/video2world/config.py -- experiment=predict2_video2world_training_2b_groot_gr1_480  job.wandb_mode=disabled
+```
+
+#### 单机8卡训练
+```bash
+# Post-training Cosmos-Predict2.5 2B
+cd /home/cosmos-predict2.5
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16 CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7'  torchrun --nproc_per_node=8 --master_port=12341 -m scripts.train --config=cosmos_predict2/_src/predict2/action/configs/action_conditioned/config.py  -- experiment=ac_reason_embeddings_rectified_flow_2b_256_320 ~dataloader_train.dataloaders job.wandb_mode=disabled
+
+# Post-training Cosmos-Predict2.5 14B model
+cd /home/cosmos-predict2.5
+wget https://klx-sdk-release-public.su.bcebos.com/v1/xav/release/models/cosmos_predict25/model_loader.patch
+patch cosmos_predict2/_src/predict2/utils/model_loader.py < model_loader.patch
+git apply --whitespace=nowarn model_loader.patch
+LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH XMLIR_FA_ACCUM_TYPE=float XMLIR_FA_GEMM_TYPE=float16  CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7' torchrun --nproc_per_node=8 --master_port=12341 -m scripts.train --config=cosmos_predict2/_src/predict2/configs/video2world/config.py -- experiment=predict2_video2world_training_14b_groot_gr1_480 model.config.use_high_sigma_strategy=false job.wandb_mode=disabled
 ```
