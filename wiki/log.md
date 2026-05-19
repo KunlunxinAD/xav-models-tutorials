@@ -2,6 +2,26 @@
 
 Append new entries at the top. Keep this file factual: record what changed, which source files were used, and what remains unresolved.
 
+## 2026-05-19 — Bulk ingest all tutorials into wiki
+
+### Sources
+
+- Processed 64 tutorial files under `tutorials/`.
+
+### Changed
+
+- Refreshed `wiki/index.md` with full source summary, model, concept, recipe, task, and domain indexes.
+- Generated or updated 64 source summary pages under `wiki/sources/`.
+- Generated or updated 56 model/topic pages under `wiki/models/`.
+- Generated or updated 12 concept pages under `wiki/concepts/`.
+- Generated or updated 7 recipe pages under `wiki/recipes/`.
+
+### Open questions
+
+- Many tutorials do not explicitly state benchmark, peak memory, throughput, accuracy, or exact image tags; keep those fields source-backed only.
+- Some tutorials contain placeholder paths and environment variables; preserve placeholders when answering.
+- If future manual review finds conflicting README/tutorial metadata, record the conflict here before normalizing pages.
+
 ## 2026-05-19 — Remove root WIKI compatibility files
 
 ### Changed
