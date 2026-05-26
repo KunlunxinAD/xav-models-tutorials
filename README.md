@@ -13,6 +13,8 @@
 - [CLAUDE.md](CLAUDE.md)：新增/更新教程时的 Agent 维护规则
 
 ## 更新日志 🚀
+- [26/05/25] 我们支持了 **[GR00T-Dreams](tutorials/GR00T-Dreams_trainval.md)** 模型的训练和推理.
+- [26/05/22] 我们支持了 **[Isaac-GR00T_N1.7](tutorials/Isaac-GR00T-N1.7_trainval.md)** 模型的训练和推理.
 - [26/04/16] 我们支持了 **[Qwen3-Omni-30B-A3B](tutorials/qwen3_omni_30b_a3b_infer.md)** 模型的推理.
 - [26/03/09] 我们支持了 **[Qwen3-30B-A3B](tutorials/qwen3_30b_a3b_pretrain.md)** 模型的预训练.
 - [26/02/04] 我们支持了 **[Qwen3-4B](tutorials/qwen3_llamafactory_trainval.md)**、**[Qwen3-30B-A3B](tutorials/qwen3_llamafactory_trainval.md)** 模型的训练.
@@ -211,7 +213,7 @@
             <td>Navsim</td>
         </tr>
         <tr>
-            <td rowspan="3"> VLM/VLA </td>
+            <td rowspan="5"> VLM/VLA </td>
             <td><a href="tutorials/qwen2.5vl_3b_trainval.md">Qwen2.5-VL</a></td>
             <td>SFT/LoRA</td>
             <td>FP16/BF16</td>
@@ -228,6 +230,22 @@
             <tr>
             <td><a href="tutorials/Pi_0_trainval.md">Pi0</a></td>
             <td>Pretrain/SFT</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td>Lerobot</td>
+        </tr>
+        </tr>
+            <tr>
+            <td><a href="tutorials/Isaac-GR00T-N1.7_trainval.md">Isaac-GR00T-N1.7</a></td>
+            <td>SFT</td>
+            <td>FP16/BF16</td>
+            <td>1 x 8</td>
+            <td>Lerobot</td>
+        </tr>
+        </tr>
+            <tr>
+            <td><a href="tutorials/GR00T-Dreams_trainval.md">GR00T-Dreams</a></td>
+            <td>SFT</td>
             <td>FP16/BF16</td>
             <td>1 x 8</td>
             <td>Lerobot</td>
