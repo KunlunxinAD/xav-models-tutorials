@@ -48,7 +48,7 @@ tar -zxvf Cosmos-Reason2-2B.tar.gz
 ## 启动容器
 ```bash
 export XAV_IMAGE=<XAV_IMAGE>
-export LLAMA_CONTAINER=Isaac-GR00T_test
+export XAV_CONTAINER=Isaac-GR00T_test
 export MODEL_PATH=</path/to/Isaac-GR00T> #本地路径
  
 docker run -itd --privileged --net=host \
@@ -57,7 +57,7 @@ docker run -itd --privileged --net=host \
     --device=/dev/xpu0 --device=/dev/xpu1 --device=/dev/xpu2 \
     --device=/dev/xpu3 --device=/dev/xpu4 --device=/dev/xpu5 \
     --device=/dev/xpu6 --device=/dev/xpu7 \
-    --name ${LLAMA_CONTAINER} \
+    --name ${XAV_CONTAINER} \
     --shm-size 256g \
     ${XAV_IMAGE} \
     bash

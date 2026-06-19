@@ -9,7 +9,9 @@ Reusable high-level flow for LLM/VLM/VLA SFT, LoRA, and GRPO-style training tuto
 | Tutorial | Model / topic | Workflow | Frameworks / backends | Representative sections |
 | --- | --- | --- | --- | --- |
 | [`Bunny_trainval.md`](../../tutorials/Bunny_trainval.md) | [`Bunny`](../models/Bunny.md) | Pretrain, Trainval, SFT, LoRA | Not explicitly extracted | Bunny Trainval Guide, 环境准备, 数据集准备, 启动容器环境, 资源下载及环境准备 |
+| [`GR00T-Dreams_trainval.md`](../../tutorials/GR00T-Dreams_trainval.md) | [`GR00T-Dreams`](../models/GR00T-Dreams.md) | Trainval, SFT | diffusers, transformers, accelerate, tensorboard | GR00T-Dreams, 准备环境, 启动容器, 下载及安装资源, 训练与推理 |
 | [`Internvl3_8b_trainval.md`](../../tutorials/Internvl3_8b_trainval.md) | [`InternVL3-8B`](../models/InternVL3-8B.md) | Pretrain, Trainval, SFT, LoRA | flash_attn, LlamaFactory | InternVL3-8B Trainval Guide, 环境准备, 准备开发环境镜像, PCIe环境配置（OAM跳过此步骤）, 确定PCIe环境 |
+| [`Isaac-GR00T-N1.7_trainval.md`](../../tutorials/Isaac-GR00T-N1.7_trainval.md) | [`Isaac-GR00T-N1.7`](../models/Isaac-GR00T-N1.7.md) | Trainval, SFT, Inference | Lerobot, Deepspeed, flash_attn, transformers, peft, wandb | Isaac-GR00T N1.7 Trainval Guide, 环境准备, 数据集及代码准备, 启动容器, 单机多卡微调 |
 | [`LLaVA_pretrain_trainval.md`](../../tutorials/LLaVA_pretrain_trainval.md) | [`LLaVA`](../models/LLaVA.md) | Inference, Pretrain, Trainval | flash_attn | LLaVA, 准备环境, 启动容器, 下载模型及安装资源, 权重准备 |
 | [`LLaVA_trainval.md`](../../tutorials/LLaVA_trainval.md) | [`LLaVA`](../models/LLaVA.md) | Inference, Pretrain, Trainval, SFT | flash_attn | LLaVA, 准备环境, 启动容器, 下载模型及安装资源, 权重准备 |
 | [`openvla_trainval.md`](../../tutorials/openvla_trainval.md) | [`OpenVLA`](../models/OpenVLA.md) | Pretrain, Trainval, SFT | flash_attn, wandb | OpenVLA Trainval Guide, 环境准备, 准备开发环境镜像, PCIe环境配置（OAM跳过此步骤）, 确定PCIe环境 |

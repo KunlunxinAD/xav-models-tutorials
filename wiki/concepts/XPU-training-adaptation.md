@@ -22,7 +22,9 @@ XPU-specific runtime and training environment settings extracted from tutorials.
 | [`FastBEV_trainval.md`](../../tutorials/FastBEV_trainval.md) | [`FastBEV`](../models/FastBEV.md) | Autonomous Driving | Trainval | MMCV |
 | [`flashocc_trainval.md`](../../tutorials/flashocc_trainval.md) | [`FlashOCC`](../models/FlashOCC.md) | Autonomous Driving | Pretrain, Trainval | MMCV, MMDetection3D, wandb |
 | [`GameFormer-Planner_trainval.md`](../../tutorials/GameFormer-Planner_trainval.md) | [`GameFormer-Planner`](../models/GameFormer-Planner.md) | Autonomous Driving | Trainval | Not explicitly extracted |
+| [`GR00T-Dreams_trainval.md`](../../tutorials/GR00T-Dreams_trainval.md) | [`GR00T-Dreams`](../models/GR00T-Dreams.md) | LLM/VLM/VLA | Trainval, SFT | diffusers, transformers, accelerate, tensorboard |
 | [`Internvl3_8b_trainval.md`](../../tutorials/Internvl3_8b_trainval.md) | [`InternVL3-8B`](../models/InternVL3-8B.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT, LoRA | flash_attn, LlamaFactory |
+| [`Isaac-GR00T-N1.7_trainval.md`](../../tutorials/Isaac-GR00T-N1.7_trainval.md) | [`Isaac-GR00T-N1.7`](../models/Isaac-GR00T-N1.7.md) | LLM/VLM/VLA | Trainval, SFT, Inference | Lerobot, Deepspeed, flash_attn, transformers, peft, wandb |
 | [`lanesegnet_trainval.md`](../../tutorials/lanesegnet_trainval.md) | [`LaneSegNet`](../models/LaneSegNet.md) | Autonomous Driving | Trainval | Not explicitly extracted |
 | [`llama2_70b_infer.md`](../../tutorials/llama2_70b_infer.md) | [`Llama2-70B`](../models/Llama2-70B.md) | LLM/VLM/VLA | Inference | Not explicitly extracted |
 | [`LLaMA_infer.md`](../../tutorials/LLaMA_infer.md) | [`LLaMA`](../models/LLaMA.md) | LLM/VLM/VLA | Inference | TensorRT, vLLM |
@@ -52,7 +54,7 @@ XPU-specific runtime and training environment settings extracted from tutorials.
 | [`qwen3_30b_a3b_pretrain.md`](../../tutorials/qwen3_30b_a3b_pretrain.md) | [`Qwen3-30B-A3B`](../models/Qwen3-30B-A3B.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT | Megatron, wandb, XMegatron |
 | [`qwen3_8b_megatron_trainval.md`](../../tutorials/qwen3_8b_megatron_trainval.md) | [`Qwen3-8B`](../models/Qwen3-8B.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT | Megatron, wandb |
 | [`qwen3_llamafactory_trainval.md`](../../tutorials/qwen3_llamafactory_trainval.md) | [`Qwen3 (LlamaFactory)`](../models/Qwen3-LlamaFactory.md) | LLM/VLM/VLA | Trainval, SFT | Deepspeed, flash_attn, LlamaFactory, wandb |
-| [`qwen3_omni_30b_a3b_infer.md`](../../tutorials/qwen3_omni_30b_a3b_infer.md) | [`Qwen3-Omni-30B-A3B`](../models/Qwen3-Omni-30B-A3B.md) | LLM/VLM/VLA | Inference, Benchmark | vLLM, xvLLM |
+| [`qwen3_omni_30b_a3b_infer.md`](../../tutorials/qwen3_omni_30b_a3b_infer.md) | [`Qwen3-Omni-30B-A3B`](../models/Qwen3-Omni-30B-A3B.md) | LLM/VLM/VLA | Inference, Benchmark | vLLM, xvLLM, vLLM-Omni, xvLLM-Omni, evalscope |
 | [`qwen3vl_8b_swift_trainval.md`](../../tutorials/qwen3vl_8b_swift_trainval.md) | [`Qwen3-VL-8B`](../models/Qwen3-VL-8B.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT, LoRA | Deepspeed, flash_attn, MS-Swift, wandb |
 | [`recogdrive_trainval.md`](../../tutorials/recogdrive_trainval.md) | [`recogdrive`](../models/recogdrive.md) | Autonomous Driving | Pretrain, Trainval | flash_attn |
 | [`regnet_trainval.md`](../../tutorials/regnet_trainval.md) | [`RegNet`](../models/RegNet.md) | Vision/OCR | Trainval | Not explicitly extracted |

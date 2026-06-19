@@ -33,7 +33,9 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 | [`far3d_trainval.md`](sources/far3d_trainval.md) | [`Far3D_trainval.md`](../tutorials/Far3D_trainval.md) | Autonomous Driving | Trainval | [`Far3D`](models/Far3D.md) |
 | [`fastbev_trainval.md`](sources/fastbev_trainval.md) | [`FastBEV_trainval.md`](../tutorials/FastBEV_trainval.md) | Autonomous Driving | Trainval | [`FastBEV`](models/FastBEV.md) |
 | [`gameformer-planner_trainval.md`](sources/gameformer-planner_trainval.md) | [`GameFormer-Planner_trainval.md`](../tutorials/GameFormer-Planner_trainval.md) | Autonomous Driving | Trainval | [`GameFormer-Planner`](models/GameFormer-Planner.md) |
+| [`groot-dreams_trainval.md`](sources/groot-dreams_trainval.md) | [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) | LLM/VLM/VLA | Trainval, SFT | [`GR00T-Dreams`](models/GR00T-Dreams.md) |
 | [`internvl3_8b_trainval.md`](sources/internvl3_8b_trainval.md) | [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT, LoRA | [`InternVL3-8B`](models/InternVL3-8B.md) |
+| [`isaac-groot-n1.7_trainval.md`](sources/isaac-groot-n1.7_trainval.md) | [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) | LLM/VLM/VLA | Trainval, SFT, Inference | [`Isaac-GR00T-N1.7`](models/Isaac-GR00T-N1.7.md) |
 | [`llama_infer.md`](sources/llama_infer.md) | [`LLaMA_infer.md`](../tutorials/LLaMA_infer.md) | LLM/VLM/VLA | Inference | [`LLaMA`](models/LLaMA.md) |
 | [`llava_pretrain_trainval.md`](sources/llava_pretrain_trainval.md) | [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) | LLM/VLM/VLA | Inference, Pretrain, Trainval | [`LLaVA`](models/LLaVA.md) |
 | [`llava_trainval.md`](sources/llava_trainval.md) | [`LLaVA_trainval.md`](../tutorials/LLaVA_trainval.md) | LLM/VLM/VLA | Inference, Pretrain, Trainval, SFT | [`LLaVA`](models/LLaVA.md) |
@@ -104,7 +106,9 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`FastBEV.md`](models/FastBEV.md)
 - [`FlashOCC.md`](models/FlashOCC.md)
 - [`GameFormer-Planner.md`](models/GameFormer-Planner.md)
+- [`GR00T-Dreams.md`](models/GR00T-Dreams.md)
 - [`InternVL3-8B.md`](models/InternVL3-8B.md)
+- [`Isaac-GR00T-N1.7.md`](models/Isaac-GR00T-N1.7.md)
 - [`LLaMA.md`](models/LLaMA.md)
 - [`LLaVA.md`](models/LLaVA.md)
 - [`LaneSegNet.md`](models/LaneSegNet.md)
@@ -180,6 +184,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 
 - [`cosmos_predict2.5_trainval.md`](../tutorials/cosmos_predict2.5_trainval.md) — cosmos-predict2.5
 - [`llama2_70b_infer.md`](../tutorials/llama2_70b_infer.md) — Llama2-70B Inference Guide
+- [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) — Isaac-GR00T N1.7 Trainval Guide
 - [`LLaMA_infer.md`](../tutorials/LLaMA_infer.md) — LLaMA Inference Guide
 - [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) — LLaVA
 - [`LLaVA_trainval.md`](../tutorials/LLaVA_trainval.md) — LLaVA
@@ -202,6 +207,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`Bunny_trainval.md`](../tutorials/Bunny_trainval.md) — Bunny Trainval Guide
 - [`flashocc_trainval.md`](../tutorials/flashocc_trainval.md) — FlashOCC
 - [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) — InternVL3-8B Trainval Guide
+- [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) — Isaac-GR00T N1.7 Trainval Guide
 - [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) — LLaVA
 - [`LLaVA_trainval.md`](../tutorials/LLaVA_trainval.md) — LLaVA
 - [`maptrv2_trainval.md`](../tutorials/maptrv2_trainval.md) — MapTRv2
@@ -211,6 +217,8 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`panoocc_trainval.md`](../tutorials/panoocc_trainval.md) — PanoOcc
 - [`petrv2_trainval.md`](../tutorials/petrv2_trainval.md) — PETRv2
 - [`Pi_0_trainval.md`](../tutorials/Pi_0_trainval.md) — Pi_0
+- [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) — GR00T-Dreams
+- [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) — Isaac-GR00T N1.7 Trainval Guide
 - [`qwen2.5_trainval.md`](../tutorials/qwen2.5_trainval.md) — Qwen2.5 Trainval Guide
 - [`qwen2.5vl_3b_trainval.md`](../tutorials/qwen2.5vl_3b_trainval.md) — Qwen2.5-VL-3B Trainval Guide
 - [`qwen2.5vl_r1_trainval.md`](../tutorials/qwen2.5vl_r1_trainval.md) — Qwen2.5-VL-R1 Trainval Guide
@@ -246,6 +254,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`FastBEV_trainval.md`](../tutorials/FastBEV_trainval.md) — FastBEV
 - [`flashocc_trainval.md`](../tutorials/flashocc_trainval.md) — FlashOCC
 - [`GameFormer-Planner_trainval.md`](../tutorials/GameFormer-Planner_trainval.md) — GameFormer-Planner
+- [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) — GR00T-Dreams
 - [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) — InternVL3-8B Trainval Guide
 - [`lanesegnet_trainval.md`](../tutorials/lanesegnet_trainval.md) — LaneSegNet
 - [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) — LLaVA
@@ -291,7 +300,9 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 ### SFT
 
 - [`Bunny_trainval.md`](../tutorials/Bunny_trainval.md) — Bunny Trainval Guide
+- [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) — GR00T-Dreams
 - [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) — InternVL3-8B Trainval Guide
+- [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) — Isaac-GR00T N1.7 Trainval Guide
 - [`LLaVA_trainval.md`](../tutorials/LLaVA_trainval.md) — LLaVA
 - [`openvla_trainval.md`](../tutorials/openvla_trainval.md) — OpenVLA Trainval Guide
 - [`Pi_0_trainval.md`](../tutorials/Pi_0_trainval.md) — Pi_0
@@ -368,7 +379,9 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 ### LLM/VLM/VLA
 
 - [`Bunny_trainval.md`](../tutorials/Bunny_trainval.md) — [`Bunny`](models/Bunny.md)
+- [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) — [`GR00T-Dreams`](models/GR00T-Dreams.md)
 - [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) — [`InternVL3-8B`](models/InternVL3-8B.md)
+- [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) — [`Isaac-GR00T-N1.7`](models/Isaac-GR00T-N1.7.md)
 - [`llama2_70b_infer.md`](../tutorials/llama2_70b_infer.md) — [`Llama2-70B`](models/Llama2-70B.md)
 - [`LLaMA_infer.md`](../tutorials/LLaMA_infer.md) — [`LLaMA`](models/LLaMA.md)
 - [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) — [`LLaVA`](models/LLaVA.md)
@@ -422,7 +435,9 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 | [`Far3D_trainval.md`](../tutorials/Far3D_trainval.md) | Far3D | [`far3d_trainval.md`](sources/far3d_trainval.md) |
 | [`FastBEV_trainval.md`](../tutorials/FastBEV_trainval.md) | FastBEV | [`fastbev_trainval.md`](sources/fastbev_trainval.md) |
 | [`GameFormer-Planner_trainval.md`](../tutorials/GameFormer-Planner_trainval.md) | GameFormer-Planner | [`gameformer-planner_trainval.md`](sources/gameformer-planner_trainval.md) |
+| [`GR00T-Dreams_trainval.md`](../tutorials/GR00T-Dreams_trainval.md) | GR00T-Dreams | [`groot-dreams_trainval.md`](sources/groot-dreams_trainval.md) |
 | [`Internvl3_8b_trainval.md`](../tutorials/Internvl3_8b_trainval.md) | InternVL3-8B Trainval Guide | [`internvl3_8b_trainval.md`](sources/internvl3_8b_trainval.md) |
+| [`Isaac-GR00T-N1.7_trainval.md`](../tutorials/Isaac-GR00T-N1.7_trainval.md) | Isaac-GR00T N1.7 Trainval Guide | [`isaac-groot-n1.7_trainval.md`](sources/isaac-groot-n1.7_trainval.md) |
 | [`LLaMA_infer.md`](../tutorials/LLaMA_infer.md) | LLaMA Inference Guide | [`llama_infer.md`](sources/llama_infer.md) |
 | [`LLaVA_pretrain_trainval.md`](../tutorials/LLaVA_pretrain_trainval.md) | LLaVA | [`llava_pretrain_trainval.md`](sources/llava_pretrain_trainval.md) |
 | [`LLaVA_trainval.md`](../tutorials/LLaVA_trainval.md) | LLaVA | [`llava_trainval.md`](sources/llava_trainval.md) |

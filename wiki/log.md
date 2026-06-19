@@ -2,6 +2,27 @@
 
 Append new entries at the top. Keep this file factual: record what changed, which source files were used, and what remains unresolved.
 
+## 2026-06-19 — Update wiki after GR00T and Qwen3-Omni tutorial refresh
+
+### Sources
+
+- `tutorials/GR00T-Dreams_trainval.md`
+- `tutorials/Isaac-GR00T-N1.7_trainval.md`
+- `tutorials/qwen3_omni_30b_a3b_infer.md`
+
+### Changed
+
+- Added source summaries for GR00T-Dreams and Isaac-GR00T-N1.7 under `wiki/sources/`.
+- Added model pages for GR00T-Dreams and Isaac-GR00T-N1.7 under `wiki/models/`.
+- Refreshed the Qwen3-Omni-30B-A3B source/model pages to match the `omni_020` tutorial content and evalscope benchmark flow.
+- Updated `wiki/index.md`, LLM/VLM concept pages, and LLM/VLM recipes with the newly supported tutorials.
+
+### Open questions
+
+- Confirmed by maintainer: `tutorials/Isaac-GR00T-N1.7_trainval.md` should use `XAV_CONTAINER`; tutorial and derived wiki pages were normalized accordingly.
+- README lists FP16/BF16 for the GR00T tutorials, but their source command sections do not explicitly state precision; keep precision claims source-scoped.
+- GR00T-Dreams has a “训练与推理” section title, but the extracted commands are single-card and 8-card training commands; no standalone inference command is recorded in the current source summary.
+
 ## 2026-05-19 — Bulk ingest all tutorials into wiki
 
 ### Sources
