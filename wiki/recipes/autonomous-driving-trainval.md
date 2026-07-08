@@ -25,6 +25,7 @@ Reusable high-level flow for AD training/evaluation tutorials: prepare image, pr
 | [`PETR_trainval.md`](../../tutorials/PETR_trainval.md) | [`PETR`](../models/PETR.md) | Trainval | MMDetection3D | PETR Trainval Guide, 环境准备, 镜像, 创建docker, 准备数据集 |
 | [`petrv2_trainval.md`](../../tutorials/petrv2_trainval.md) | [`PETRv2`](../models/PETRv2.md) | Pretrain, Trainval | MMDetection3D | PETRv2, 准备环境, 启动容器, 下载及安装资源, 下载PETRv2代码 |
 | [`PointPillar_trainval.md`](../../tutorials/PointPillar_trainval.md) | [`PointPillar`](../models/PointPillar.md) | Trainval | MMCV, MMDetection3D | PointPillar, 准备环境, 准备数据集及代码, 准备数据集, 下载模型代码 |
+| [`Ptv3_Trainval_Guide.md`](../../tutorials/Ptv3_Trainval_Guide.md) | [`PTv3`](../models/PTv3.md) | Trainval | Pointcept, MMCV | Point Transformer V3 (Ptv3) Trainval Guide, 概述, 准备环境, 下载数据集, 启动容器, 下载及安装依赖, 执行训练 |
 | [`QCNet_trainval.md`](../../tutorials/QCNet_trainval.md) | [`QCNet`](../models/QCNet.md) | Trainval | Not explicitly extracted | QCNet, 准备环境, 准备数据集及代码, 下载模型代码, 准备数据集 |
 | [`recogdrive_trainval.md`](../../tutorials/recogdrive_trainval.md) | [`recogdrive`](../models/recogdrive.md) | Pretrain, Trainval | flash_attn | recogdrive, 环境准备, PCIe环境配置（OAM跳过此步骤）, 确定PCIe环境, 配置PCIe的8卡互联模式 |
 | [`sparse4d_trainval.md`](../../tutorials/sparse4d_trainval.md) | [`Sparse4D`](../models/Sparse4D.md) | Pretrain, Trainval | MMCV | Sparse4D, 环境准备, 数据集及代码准备, 数据集准备, 下载代码及预训练权重 |

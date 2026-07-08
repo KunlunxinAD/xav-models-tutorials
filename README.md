@@ -13,6 +13,7 @@
 - [CLAUDE.md](CLAUDE.md)：新增/更新教程时的 Agent 维护规则
 
 ## 更新日志 🚀
+- [26/07/08] 我们支持了 **[PTv3](tutorials/Ptv3_Trainval_Guide.md)** 模型的训练.
 - [26/05/25] 我们支持了 **[GR00T-Dreams](tutorials/GR00T-Dreams_trainval.md)** 模型的训练和推理.
 - [26/05/22] 我们支持了 **[Isaac-GR00T_N1.7](tutorials/Isaac-GR00T-N1.7_trainval.md)** 模型的训练和推理.
 - [26/04/16] 我们支持了 **[Qwen3-Omni-30B-A3B](tutorials/qwen3_omni_30b_a3b_infer.md)** 模型的推理.
@@ -86,7 +87,7 @@
             <td>-</td>
         </tr>
         <tr>
-            <td rowspan="18"> E2E AD Models </td>
+            <td rowspan="19"> E2E AD Models </td>
             <td><a href="tutorials/bevdet_trainval.md">BEVDet</a></td>
             <td>Pretrain</td>
             <td>FP32</td>
@@ -106,6 +107,13 @@
             <td>FP32</td>
             <td>1 x 8</td>
             <td>MMCV</td>
+        </tr>
+        <tr>
+            <td><a href="tutorials/Ptv3_Trainval_Guide.md">PTv3</a></td>
+            <td>Pretrain</td>
+            <td>FP32/FP16</td>
+            <td>1 x 8</td>
+            <td>Pointcept</td>
         </tr>
         <tr>
             <td><a href="tutorials/PETR_trainval.md">PETR</a></td>

@@ -44,6 +44,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 | [`paddleocr_trainval.md`](sources/paddleocr_trainval.md) | [`PaddleOCR_trainval.md`](../tutorials/PaddleOCR_trainval.md) | Vision/OCR | Inference, Pretrain, Trainval | [`PaddleOCR-v5`](models/PaddleOCR-v5.md) |
 | [`pi_0_trainval.md`](sources/pi_0_trainval.md) | [`Pi_0_trainval.md`](../tutorials/Pi_0_trainval.md) | LLM/VLM/VLA | Pretrain, Trainval, SFT | [`Pi0`](models/Pi0.md) |
 | [`pointpillar_trainval.md`](sources/pointpillar_trainval.md) | [`PointPillar_trainval.md`](../tutorials/PointPillar_trainval.md) | Autonomous Driving | Trainval | [`PointPillar`](models/PointPillar.md) |
+| [`ptv3_trainval.md`](sources/ptv3_trainval.md) | [`Ptv3_Trainval_Guide.md`](../tutorials/Ptv3_Trainval_Guide.md) | Autonomous Driving | Trainval | [`PTv3`](models/PTv3.md) |
 | [`qcnet_trainval.md`](sources/qcnet_trainval.md) | [`QCNet_trainval.md`](../tutorials/QCNet_trainval.md) | Autonomous Driving | Trainval | [`QCNet`](models/QCNet.md) |
 | [`sparsedrive_trainval.md`](sources/sparsedrive_trainval.md) | [`SparseDrive_trainval.md`](../tutorials/SparseDrive_trainval.md) | Autonomous Driving | Trainval | [`SparseDrive`](models/SparseDrive.md) |
 | [`statetransformer_trainval.md`](sources/statetransformer_trainval.md) | [`StateTransformer_trainval.md`](../tutorials/StateTransformer_trainval.md) | General | Trainval | [`StateTransformer`](models/StateTransformer.md) |
@@ -125,6 +126,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`PanoOcc.md`](models/PanoOcc.md)
 - [`Pi0.md`](models/Pi0.md)
 - [`PointPillar.md`](models/PointPillar.md)
+- [`PTv3.md`](models/PTv3.md)
 - [`QCNet.md`](models/QCNet.md)
 - [`Qwen2-7B.md`](models/Qwen2-7B.md)
 - [`Qwen2-VL-7B.md`](models/Qwen2-VL-7B.md)
@@ -271,6 +273,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`petrv2_trainval.md`](../tutorials/petrv2_trainval.md) — PETRv2
 - [`Pi_0_trainval.md`](../tutorials/Pi_0_trainval.md) — Pi_0
 - [`PointPillar_trainval.md`](../tutorials/PointPillar_trainval.md) — PointPillar
+- [`Ptv3_Trainval_Guide.md`](../tutorials/Ptv3_Trainval_Guide.md) — Point Transformer V3 (Ptv3) Trainval Guide
 - [`QCNet_trainval.md`](../tutorials/QCNet_trainval.md) — QCNet
 - [`qwen2.5_trainval.md`](../tutorials/qwen2.5_trainval.md) — Qwen2.5 Trainval Guide
 - [`qwen2.5vl_3b_trainval.md`](../tutorials/qwen2.5vl_3b_trainval.md) — Qwen2.5-VL-3B Trainval Guide
@@ -361,6 +364,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 - [`PETR_trainval.md`](../tutorials/PETR_trainval.md) — [`PETR`](models/PETR.md)
 - [`petrv2_trainval.md`](../tutorials/petrv2_trainval.md) — [`PETRv2`](models/PETRv2.md)
 - [`PointPillar_trainval.md`](../tutorials/PointPillar_trainval.md) — [`PointPillar`](models/PointPillar.md)
+- [`Ptv3_Trainval_Guide.md`](../tutorials/Ptv3_Trainval_Guide.md) — [`PTv3`](models/PTv3.md)
 - [`QCNet_trainval.md`](../tutorials/QCNet_trainval.md) — [`QCNet`](models/QCNet.md)
 - [`recogdrive_trainval.md`](../tutorials/recogdrive_trainval.md) — [`recogdrive`](models/recogdrive.md)
 - [`sparse4d_trainval.md`](../tutorials/sparse4d_trainval.md) — [`Sparse4D`](models/Sparse4D.md)
@@ -446,6 +450,7 @@ This file is the derived navigation layer for the XAV Open Model Tutorials repos
 | [`PaddleOCR_trainval.md`](../tutorials/PaddleOCR_trainval.md) | PaddleOCR_v5 | [`paddleocr_trainval.md`](sources/paddleocr_trainval.md) |
 | [`Pi_0_trainval.md`](../tutorials/Pi_0_trainval.md) | Pi_0 | [`pi_0_trainval.md`](sources/pi_0_trainval.md) |
 | [`PointPillar_trainval.md`](../tutorials/PointPillar_trainval.md) | PointPillar | [`pointpillar_trainval.md`](sources/pointpillar_trainval.md) |
+| [`Ptv3_Trainval_Guide.md`](../tutorials/Ptv3_Trainval_Guide.md) | Point Transformer V3 (Ptv3) Trainval Guide | [`ptv3_trainval.md`](sources/ptv3_trainval.md) |
 | [`QCNet_trainval.md`](../tutorials/QCNet_trainval.md) | QCNet | [`qcnet_trainval.md`](sources/qcnet_trainval.md) |
 | [`SparseDrive_trainval.md`](../tutorials/SparseDrive_trainval.md) | SparseDrive | [`sparsedrive_trainval.md`](sources/sparsedrive_trainval.md) |
 | [`StateTransformer_trainval.md`](../tutorials/StateTransformer_trainval.md) | StateTransformer | [`statetransformer_trainval.md`](sources/statetransformer_trainval.md) |

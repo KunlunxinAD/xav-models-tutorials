@@ -2,6 +2,27 @@
 
 Append new entries at the top. Keep this file factual: record what changed, which source files were used, and what remains unresolved.
 
+## 2026-07-08 — Ingest Point Transformer V3 (PTv3) trainval tutorial
+
+### Sources
+
+- `tutorials/Ptv3_Trainval_Guide.md` (newly added)
+
+### Changed
+
+- Added source tutorial `tutorials/Ptv3_Trainval_Guide.md` (Point Transformer V3, nuScenes semseg trainval on Pointcept).
+- Added source summary `wiki/sources/ptv3_trainval.md`.
+- Added model page `wiki/models/PTv3.md`.
+- Registered PTv3 in `wiki/index.md` (source summaries, model pages, Trainval task section, Autonomous Driving domain section, all-source-tutorials table).
+- Added PTv3 rows to `wiki/recipes/autonomous-driving-trainval.md` and `wiki/concepts/Autonomous-driving-trainval.md`.
+- Added a README changelog entry and an E2E AD Models table row (rowspan 18 → 19).
+
+### Open questions
+
+- The source training-environment block contains two probable typos preserved verbatim: `export export XDNN_USE_FAST_GELU=1` (duplicate `export`) and `export XMLIR_ENABLE_FAST_FC=1wanqu` (trailing `wanqu`). Confirm intended values with the maintainer.
+- Precision is not explicitly declared as a single format; the tutorial applies an `mmcv_amp_fp16` patch and sets a BF16 round-mode env, so the README table marks FP32/FP16 as inference from the AMP patch rather than an explicit source claim.
+- Benchmark, peak memory, throughput, and accuracy are not stated and remain unknown.
+
 ## 2026-06-19 — Update wiki after GR00T and Qwen3-Omni tutorial refresh
 
 ### Sources

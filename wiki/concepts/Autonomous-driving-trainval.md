@@ -25,6 +25,7 @@ Autonomous driving model training/evaluation tutorials, commonly involving datas
 | [`PETR_trainval.md`](../../tutorials/PETR_trainval.md) | [`PETR`](../models/PETR.md) | Autonomous Driving | Trainval | MMDetection3D |
 | [`petrv2_trainval.md`](../../tutorials/petrv2_trainval.md) | [`PETRv2`](../models/PETRv2.md) | Autonomous Driving | Pretrain, Trainval | MMDetection3D |
 | [`PointPillar_trainval.md`](../../tutorials/PointPillar_trainval.md) | [`PointPillar`](../models/PointPillar.md) | Autonomous Driving | Trainval | MMCV, MMDetection3D |
+| [`Ptv3_Trainval_Guide.md`](../../tutorials/Ptv3_Trainval_Guide.md) | [`PTv3`](../models/PTv3.md) | Autonomous Driving | Trainval | Pointcept, MMCV |
 | [`QCNet_trainval.md`](../../tutorials/QCNet_trainval.md) | [`QCNet`](../models/QCNet.md) | Autonomous Driving | Trainval | Not explicitly extracted |
 | [`recogdrive_trainval.md`](../../tutorials/recogdrive_trainval.md) | [`recogdrive`](../models/recogdrive.md) | Autonomous Driving | Pretrain, Trainval | flash_attn |
 | [`sparse4d_trainval.md`](../../tutorials/sparse4d_trainval.md) | [`Sparse4D`](../models/Sparse4D.md) | Autonomous Driving | Pretrain, Trainval | MMCV |
