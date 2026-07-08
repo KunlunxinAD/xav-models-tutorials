@@ -19,9 +19,13 @@ Append new entries at the top. Keep this file factual: record what changed, whic
 
 ### Open questions
 
-- The source training-environment block contains two probable typos preserved verbatim: `export export XDNN_USE_FAST_GELU=1` (duplicate `export`) and `export XMLIR_ENABLE_FAST_FC=1wanqu` (trailing `wanqu`). Confirm intended values with the maintainer.
 - Precision is not explicitly declared as a single format; the tutorial applies an `mmcv_amp_fp16` patch and sets a BF16 round-mode env, so the README table marks FP32/FP16 as inference from the AMP patch rather than an explicit source claim.
 - Benchmark, peak memory, throughput, and accuracy are not stated and remain unknown.
+
+### Follow-up (2026-07-08)
+
+- Maintainer confirmed the two training-env lines were typos. Fixed in the tutorial: `export export XDNN_USE_FAST_GELU=1` → `export XDNN_USE_FAST_GELU=1`, and `export XMLIR_ENABLE_FAST_FC=1wanqu` → `export XMLIR_ENABLE_FAST_FC=1`. Updated source summary and model page accordingly.
+
 
 ## 2026-06-19 — Update wiki after GR00T and Qwen3-Omni tutorial refresh
 

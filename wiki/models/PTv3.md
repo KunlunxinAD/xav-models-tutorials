@@ -20,5 +20,4 @@
 ## Missing evidence to verify before making claims
 
 - Do not infer benchmark, accuracy, memory usage, throughput, image tag, or exact software version unless it is stated in the source tutorial.
-- The source training-environment block contains two probable typos (`export export XDNN_USE_FAST_GELU=1` and `XMLIR_ENABLE_FAST_FC=1wanqu`); verify with the maintainer before reuse. See [`source summary`](../sources/ptv3_trainval.md).
 - If multiple tutorials for this model disagree, record the conflict in `wiki/log.md` before normalizing the model page.

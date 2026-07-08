@@ -80,10 +80,10 @@ docker exec -it ${XAV_CONTAINER} bash
 ## 执行训练
     ```
     export XMLIR_ENABLE_NEW_PG=1
-    export export XDNN_USE_FAST_GELU=1
+    export XDNN_USE_FAST_GELU=1
     export XMLIR_BMM_DISPATCH_VALUE=2
     export XMLIR_ENABLE_LINEAR_FC_FUSION=1
-    export XMLIR_ENABLE_FAST_FC=1wanqu
+    export XMLIR_ENABLE_FAST_FC=1
     export XPYTORCH_RUN_ENHANCE=1
     unset COPY2D_SDNN
     export XDNN_USE_FAST_SWISH=1

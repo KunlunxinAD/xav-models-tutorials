@@ -71,6 +71,5 @@
 
 ## Open questions
 
-- Two likely typos exist in the source training-environment block and are preserved verbatim in the tutorial: `export export XDNN_USE_FAST_GELU=1` (duplicate `export`) and `export XMLIR_ENABLE_FAST_FC=1wanqu` (trailing `wanqu`). Confirm the intended values with the maintainer before relying on this block.
 - Benchmark, peak memory, throughput, and accuracy are not stated in the source and should be treated as unknown.
 - Image tags and private environment details are intentionally not inferred.
